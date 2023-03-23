@@ -1,0 +1,12 @@
+.wrapper {
+    width: 100%;
+    border-bottom: 1px solid lightgray;
+}
+
+.user {
+    text-align: center;
+}
+
+.user img {
+    border-radius: 50%;
+}

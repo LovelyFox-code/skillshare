@@ -1,0 +1,13 @@
+.form{
+    width: 40%;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-direction: column;
+    border: 1px solid #0b9dcf;
+    padding: 13px;
+    border-radius: 8px;
+}
+input:focus{
+    outline: none;
+}
