@@ -1,8 +1,14 @@
-# Getting Started with Create React App
+# Skill matrix app
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+
+### Built with
+
+- React
+- TypeScript
+- Flex-box
+- [TypeScript](https://www.typescriptlang.org/) - TypeScript
+
 
 In the project directory, you can run:
 
