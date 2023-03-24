@@ -4,11 +4,23 @@
     gap: 15px;
     justify-content: center;
     flex-direction: column;
-    border: 1px solid #0b9dcf;
+    border: 1px solid var(#0b9dcf);
     padding: 13px;
-    border-radius: 8px;
+    border-radius: var(--border-radius);
+    padding: var(--padding-large);
 }
-
+input{
+    padding: 8px 16px;
+   
+}
 input:focus {
     outline: none;
+}
+label{
+    color: var(--accent-color);
+}
+.input_box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

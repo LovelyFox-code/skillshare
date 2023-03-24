@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./SkillSection.module.css";
 import { FaStar } from "react-icons/fa";
-import { HiOutlineXCircle } from "react-icons/hi";
+import {BiMinus} from 'react-icons/bi'
 
 interface ISkillProps {
   skill: string;
@@ -29,6 +29,7 @@ const SkillSection = (props: ISkillProps) => {
                 key={star}
                 color={isActive === star ? "orange" : "lightgray"}
                 onClick={() => starHandler(index)}
+                className={styles.star}
               />
             ))}
           </div>
@@ -36,7 +37,7 @@ const SkillSection = (props: ISkillProps) => {
             <div id={props.id}>{props.skill}</div>
             {props.isShowed ? (
               <div onClick={() => onDelete(props.id)}>
-                <HiOutlineXCircle size="20px" color="#0b9dcf" />
+                <BiMinus size="20px" color="red"/>
               </div>
             ) : null}
           </div>

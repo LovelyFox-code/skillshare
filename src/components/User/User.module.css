@@ -1,6 +1,7 @@
 .wrapper {
     width: 100%;
-    border-bottom: 1px solid lightgray;
+    border-bottom: 1px solid var(--accent-color);
+    margin-bottom: 10px;
 }
 
 .user {

@@ -1,10 +1,11 @@
 .btn {
     padding: 10px 20px;
     background-color: white;
-    color: #0b9dcf;
-    border: 1px solid #0b9dcf;
-    border-radius: 8px;
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+    border-radius: var(--border-radius);
     transition-duration: 0.5s;
+    font-size: var(--font-size-m);
 }
 
 .btn:hover {

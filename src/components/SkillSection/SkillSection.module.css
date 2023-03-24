@@ -11,3 +11,6 @@
     display: flex;
     justify-content: space-between;
 }
+.star{
+    padding-left: var(--padding-small);
+}
