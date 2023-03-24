@@ -35,10 +35,7 @@ function App() {
     setValue(target.value);
   };
   const handleSubmit=()=>{
-    let tempArr = skills;
-    tempArr.push({skill: value, id: "100"})
-    setSkills(tempArr);
-    console.log("SUBMIT", tempArr)
+    setSkills([...skills, {skill: value, id: "100"}])
   }
   const showHideHandler =()=>{
     setIsShowed(!isShowed);
