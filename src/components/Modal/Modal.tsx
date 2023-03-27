@@ -1,25 +1,27 @@
-import React, { ChangeEventHandler } from "react";
+import React, { ChangeEventHandler, FormEvent } from "react";
 import styles from "./Modal.module.css";
 import { BiPlus } from "react-icons/bi";
 
 interface IModalProps {
   handleChange: ChangeEventHandler<HTMLInputElement> | undefined;
   isModal: boolean;
-  handleSubmit: ()=>void;
- 
+  handleSubmit: (e: FormEvent<HTMLFormElement>)=> void;
+  onClickHandleSubmit: ()=>void;
+  value: string
 }
 const Modal = (props: IModalProps) => {
 
   return (
     <>
       {props.isModal ? (
-        <form className={styles.form} >
+        <form className={styles.form} onSubmit={props.handleSubmit}>
           <label>Add more skills</label>
           <div className={styles.input_box}><input onChange={props.handleChange} />
           <BiPlus 
           size="20px" 
           color="#0b9dcf"
-          onClick={props.handleSubmit}/></div>
+          values={props.value}
+          onClick={props.onClickHandleSubmit}/></div>
         </form>
       ) : null}
     </>

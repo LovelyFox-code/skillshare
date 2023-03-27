@@ -1,4 +1,4 @@
-import { useState, ChangeEvent } from "react";
+import { useState, ChangeEvent, FormEvent } from "react";
 import "./App.css";
 import Button from "./components/Button/Button";
 import Modal from "./components/Modal/Modal";
@@ -9,33 +9,40 @@ interface Skills {
   skill: string,
   id: string
 }
-interface Skill {
-  skill: string,
-  id: string
+const createID = ()=>{
+  const idText =(((1+Math.random())*0x10000)|0).toString(16).substring(1)
+  return idText;
 }
 function App() {
   const [isShowed, setIsShowed] = useState(false);
   const [isModal, setIsModal] = useState(false);
   const [value, setValue] = useState("");
-  const [skills, setSkills] = useState<Skill[]>(
+  const [skills, setSkills] = useState<Skills[]>(
     [
-      { skill: "HTML/CSS", id: "1" },
-      { skill: "React js", id: "2" },
-      { skill: "JavaScript", id: "3" },
-      { skill: "TypeScript", id: "4" },
-      { skill: "Next.js", id: "5" },
-      { skill: "Angular", id: "6" },
-      { skill: "Node.js", id: "7" },
-      { skill: "GitHub", id: "8" },
+      { skill: "HTML/CSS", id: createID() },
+      { skill: "React js", id: createID() },
+      { skill: "JavaScript", id: createID() },
+      { skill: "TypeScript", id: createID() },
+      { skill: "Next.js", id: createID() },
+      { skill: "Angular", id: createID() },
+      { skill: "Node.js", id: createID() },
+      { skill: "GitHub", id: createID() },
     ]
   )
-  console.log("Value: ", value);
+  
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const target = e.target;
     setValue(target.value);
   };
-  const handleSubmit=()=>{
-    setSkills([...skills, {skill: value, id: "100"}])
+  const handleSubmit=(e: FormEvent<HTMLFormElement>)=>{
+    e.preventDefault()
+    setSkills([...skills, {skill: value, id: createID()}])
+    console.log(skills[0].id);
+    
+  }
+  const onClickHandleSubmit=()=>{
+    setSkills([...skills, {skill: value, id: createID()}]);
+    
   }
   const showHideHandler =()=>{
     setIsShowed(!isShowed);
@@ -57,7 +64,7 @@ function App() {
             isShowed={isShowed}
           />
         ))}
-        <Modal isModal={isModal} handleChange={handleChange} handleSubmit={handleSubmit}/>
+        <Modal isModal={isModal} handleChange={handleChange} handleSubmit={handleSubmit} onClickHandleSubmit={onClickHandleSubmit} value={value}/>
         <div className="btn_wrapper">
           <Button name="add Skill" onClick={modalToggle} />
           <Button name="remove" onClick={showHideHandler} />
