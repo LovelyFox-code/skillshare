@@ -22,7 +22,6 @@ const Stars = () => {
           key={star.id}
           color={index <= (isActive || hover) ? "orange" : "lightgray"}
           onClick={() => setLevel(index)}
-          // className={styles.star}
           onMouseEnter={() => setHover(index)}
           onMouseLeave={() => setHover(isActive)}
         />

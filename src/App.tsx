@@ -6,67 +6,75 @@ import SkillSection from "./components/SkillSection/SkillSection";
 import User from "./components/User/User";
 
 interface Skills {
-  skill: string,
-  id: string
+  skill: string;
+  id: string;
 }
-const createID = ()=>{
-  const idText =(((1+Math.random())*0x10000)|0).toString(16).substring(1)
+export const createID = () => {
+  const idText = (((1 + Math.random()) * 0x10000) | 0)
+    .toString(16)
+    .substring(1);
   return idText;
-}
+};
 function App() {
   const [isShowed, setIsShowed] = useState(false);
   const [isModal, setIsModal] = useState(false);
   const [value, setValue] = useState("");
-  const [skills, setSkills] = useState<Skills[]>(
-    [
-      { skill: "HTML/CSS", id: createID() },
-      { skill: "React js", id: createID() },
-      { skill: "JavaScript", id: createID() },
-      { skill: "TypeScript", id: createID() },
-      { skill: "Next.js", id: createID() },
-      { skill: "Angular", id: createID() },
-      { skill: "Node.js", id: createID() },
-      { skill: "GitHub", id: createID() },
-    ]
-  )
-  
+  const [skills, setSkills] = useState<Skills[]>([
+    { skill: "HTML/CSS", id: createID() },
+    { skill: "React js", id: createID() },
+    { skill: "JavaScript", id: createID() },
+    { skill: "TypeScript", id: createID() },
+    { skill: "Next.js", id: createID() },
+    { skill: "Angular", id: createID() },
+    { skill: "Node.js", id: createID() },
+    { skill: "GitHub", id: createID() },
+  ]);
+
   const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
     const target = e.target;
     setValue(target.value);
   };
-  const handleSubmit=(e: FormEvent<HTMLFormElement>)=>{
-    e.preventDefault()
-    setSkills([...skills, {skill: value, id: createID()}])
-    console.log(skills[0].id);
-    
-  }
-  const onClickHandleSubmit=()=>{
-    setSkills([...skills, {skill: value, id: createID()}]);
-    
-  }
-  const showHideHandler =()=>{
+
+  // two func do the same, can not change it because of (event)
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setSkills([...skills, { skill: value, id: createID() }]);
+  };
+  const onClickHandleSubmit = () => {
+    setSkills([...skills, { skill: value, id: createID() }]);
+  };
+  const showHideHandler = () => {
     setIsShowed(!isShowed);
-  }
-  const  modalToggle =() =>{
+  };
+  const modalToggle = () => {
     setIsModal(!isModal);
-  }
+  };
 
   return (
     <div className="main">
-      <h1>Skill matrix</h1>
       <div className="box">
         <User />
         {skills.map((skill) => (
           <SkillSection
+          // could I use as a key value index from map()?
             key={skill.id}
             skill={skill.skill}
             id={skill.id}
             isShowed={isShowed}
           />
         ))}
-        <Modal isModal={isModal} handleChange={handleChange} handleSubmit={handleSubmit} onClickHandleSubmit={onClickHandleSubmit} value={value}/>
+        <Modal
+          isModal={isModal}
+          handleChange={handleChange}
+          handleSubmit={handleSubmit}
+          onClickHandleSubmit={onClickHandleSubmit}
+          value={value}
+        />
         <div className="btn_wrapper">
-          <Button name="add Skill" onClick={modalToggle} />
+          <Button
+            name={isModal ? "Done" : "Add Skills"}
+            onClick={modalToggle}
+          />
           <Button name="remove" onClick={showHideHandler} />
         </div>
       </div>
@@ -75,5 +83,3 @@ function App() {
 }
 
 export default App;
-
-

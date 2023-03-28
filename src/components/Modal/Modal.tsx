@@ -10,7 +10,7 @@ interface IModalProps {
   value: string
 }
 const Modal = (props: IModalProps) => {
-
+  
   return (
     <>
       {props.isModal ? (

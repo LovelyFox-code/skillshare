@@ -1,7 +1,7 @@
 .skill_wrapper {
     display: flex;
     width: 100%;
-    height: 20px;
+    line-height: 29px;
     justify-content: space-around;
     padding: 7px;
 }
@@ -10,7 +10,4 @@
     width: 150px;
     display: flex;
     justify-content: space-between;
-}
-.star{
-    padding-left: var(--padding-small);
 }
