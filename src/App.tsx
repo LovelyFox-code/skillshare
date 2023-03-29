@@ -55,6 +55,10 @@ function App() {
     <div className="main">
       <div className="box">
         <User />
+        <div className="container_flex">
+          <p>Current Level</p>
+          <p>Interest</p>
+        </div>
         {skills.map((skill) => (
           <SkillSection
           // could I use as a key value index from map()?
