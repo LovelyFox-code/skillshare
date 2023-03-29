@@ -17,13 +17,13 @@ const Modal = (props: IModalProps) => {
     <>
       {props.isModal ? (
         <form className={styles.form} onSubmit={props.handleSubmit}>
-          <label>Add more skills</label>
+          <label htmlFor="input">Add more skills</label>
           <div className={styles.input_box}><input onChange={props.handleChange} />
-          <BiPlus 
+          <button onClick={props.onClickHandleSubmit}><BiPlus 
           size="20px" 
           color="#0b9dcf"
           values={props.value}
-          onClick={props.onClickHandleSubmit}/></div>
+          /></button></div>
         </form>
       ) : null}
     </>
