@@ -11,10 +11,9 @@ const starsLevel = [
 const Stars = () => {
   const [isActive, setIsActive] = useState(0);
   const [hover, setHover] = useState(0);
-  const setLevel=(index: number)=> {
+  const setLevel = (index: number) => {
     setIsActive(index);
-    
-  }
+  };
   return (
     <>
       {starsLevel.map((star, index) => (

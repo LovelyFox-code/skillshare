@@ -61,7 +61,7 @@ function App() {
         </div>
         {skills.map((skill) => (
           <SkillSection
-          // could I use as a key value index from map()?
+            // could I use as a key value index from map()?
             key={skill.id}
             skill={skill.skill}
             id={skill.id}
@@ -80,7 +80,10 @@ function App() {
             name={isModal ? "Done" : "Add Skills"}
             onClick={modalToggle}
           />
-          <Button name={isShowed ? "done" : "remove"} onClick={showHideHandler} />
+          <Button
+            name={isShowed ? "done" : "remove"}
+            onClick={showHideHandler}
+          />
         </div>
       </div>
     </div>
