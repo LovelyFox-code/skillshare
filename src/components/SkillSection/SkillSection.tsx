@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { BiMinus } from "react-icons/bi";
+import { MdOutlineDeleteForever } from "react-icons/md";
 import styles from "./SkillSection.module.css";
 import Stars from "../Stars/Stars";
 
@@ -26,9 +26,9 @@ const onDelete=(id: string)=> {
           <div className={styles.skill_item}>
             <div id={props.id}>{props.skill}</div>
             {props.isShowed ? (
-              <div onClick={() => onDelete(props.id)}>
-                <BiMinus size="20px" color="red" />
-              </div>
+              <button className = {styles.delete_btn}onClick={() => onDelete(props.id)}>
+                <MdOutlineDeleteForever size="20px" color="red" />
+              </button>
             ) : null}
           </div>
           <div className={styles.skill_item}>

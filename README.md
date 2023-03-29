@@ -18,10 +18,10 @@
 - comments with questions
 
 # Standards of project
-- use functional components (like arrow-functions)
+- use arrow-functions
 - don't use inline-styles
 - format your code before committing
-- separate components, containers, utilities, and other related code
+- separate components, utilities, and other related code
 - import structure: libraries, third parties, components
 
 

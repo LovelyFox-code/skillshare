@@ -76,7 +76,7 @@ function App() {
             name={isModal ? "Done" : "Add Skills"}
             onClick={modalToggle}
           />
-          <Button name="remove" onClick={showHideHandler} />
+          <Button name={isShowed ? "done" : "remove"} onClick={showHideHandler} />
         </div>
       </div>
     </div>
