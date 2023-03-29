@@ -1,6 +1,8 @@
-import React, { ChangeEventHandler, FormEvent } from "react";
-import styles from "./Modal.module.css";
+import { ChangeEventHandler, FormEvent } from "react";
 import { BiPlus } from "react-icons/bi";
+
+import styles from "./Modal.module.css";
+
 
 interface IModalProps {
   handleChange: ChangeEventHandler<HTMLInputElement> | undefined;
@@ -10,7 +12,7 @@ interface IModalProps {
   value: string
 }
 const Modal = (props: IModalProps) => {
-  
+
   return (
     <>
       {props.isModal ? (

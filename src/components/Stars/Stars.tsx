@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaStar } from "react-icons/fa";
 
 const starsLevel = [
@@ -11,7 +11,7 @@ const starsLevel = [
 const Stars = () => {
   const [isActive, setIsActive] = useState(0);
   const [hover, setHover] = useState(0);
-  function setLevel(index: number) {
+  const setLevel=(index: number)=> {
     setIsActive(index);
     
   }

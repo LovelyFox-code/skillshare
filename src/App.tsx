@@ -1,5 +1,6 @@
 import { useState, ChangeEvent, FormEvent } from "react";
 import "./App.css";
+
 import Button from "./components/Button/Button";
 import Modal from "./components/Modal/Modal";
 import SkillSection from "./components/SkillSection/SkillSection";

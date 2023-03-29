@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import styles from "./SkillSection.module.css";
+import { useState } from "react";
 import { BiMinus } from "react-icons/bi";
+import styles from "./SkillSection.module.css";
 import Stars from "../Stars/Stars";
 
 interface ISkillProps {
@@ -13,7 +13,7 @@ interface ISkillProps {
 const SkillSection = (props: ISkillProps) => {
   const [isDeleted, setIsDelited] = useState("");
 
-  function onDelete(id: string) {
+const onDelete=(id: string)=> {
     setIsDelited(id);
   }
   return (

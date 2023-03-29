@@ -13,9 +13,16 @@
 
 
 ### To do
-- add standarts
-- questions about standart
+- add standards
+- questions about standards
 - comments with questions
+
+# Standards of project
+- use functional components (like arrow-functions)
+- don't use inline-styles
+- format your code before committing
+- separate components, containers, utilities, and other related code
+- import structure: libraries, third parties, components
 
 
 To start:
