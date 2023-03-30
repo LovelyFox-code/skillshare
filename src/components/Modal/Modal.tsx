@@ -12,7 +12,7 @@ interface IModalProps {
 const Modal = (props: IModalProps) => {
   return (
     <>
-      <form className={styles.form} onSubmit={props.handleSubmit}>
+      {props.isModal ? <form className={styles.form} onSubmit={props.handleSubmit}>
         <label htmlFor="input">Add more skills</label>
         <div className={styles.input_box}>
           <input onChange={props.handleChange} />
@@ -20,7 +20,7 @@ const Modal = (props: IModalProps) => {
             <BiPlus size="20px" color="#0b9dcf" values={props.value} />
           </button>
         </div>
-      </form>
+      </form> : null}
     </>
   );
 };

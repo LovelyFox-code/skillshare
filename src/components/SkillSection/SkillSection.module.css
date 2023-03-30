@@ -4,12 +4,14 @@
     line-height: 29px;
     justify-content: space-around;
     padding: 7px;
+
 }
 
 .skill_item {
     width: 150px;
     display: flex;
     justify-content: space-between;
+        
 }
 .delete_btn{
     background-color: white;

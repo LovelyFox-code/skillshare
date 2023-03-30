@@ -9,13 +9,13 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  border: 1px solid #0b9dcf;
+  border: 3px solid #0b9dcf;
   border-radius: var(--border-radius);
-  padding: 30px 0;
+  padding-bottom: 30px;
   max-width: 600px;
   margin: auto;
   margin-top: 5%;
-
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
 }
 
 .btn_wrapper {
@@ -28,4 +28,6 @@
   display: flex;
   width: 80%;
   justify-content: space-between;
+  font-size: var(--font-size-l);
+  padding-bottom: var(--padding-large);
 }

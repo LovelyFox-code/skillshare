@@ -6,7 +6,7 @@ test("should have input", () => {
   render(
     <Modal
       handleChange={undefined}
-      isModal={false}
+      isModal={true}
       handleSubmit={function (e: FormEvent<HTMLFormElement>): void {
         throw new Error("Function not implemented.");
       }}
