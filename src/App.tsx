@@ -63,6 +63,7 @@ function App() {
       ) : (
         <div className="box">
           <User />
+          <h1>Your <span>skills</span></h1>
           <div className="container_flex">
             <p>Current Level</p>
             <p>Interest</p>

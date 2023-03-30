@@ -9,7 +9,7 @@
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  border: 3px solid #0b9dcf;
+  border: 3px solid var(--accent-color);
   border-radius: var(--border-radius);
   padding-bottom: 30px;
   max-width: 600px;
@@ -30,4 +30,8 @@
   justify-content: space-between;
   font-size: var(--font-size-l);
   padding-bottom: var(--padding-large);
+}
+
+h1>span{
+  color: var(--accent-color);
 }
