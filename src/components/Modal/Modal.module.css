@@ -24,3 +24,7 @@ label{
     justify-content: center;
     align-items: center;
 }
+.btn_plus{
+    background-color: white;
+    border: none;
+}

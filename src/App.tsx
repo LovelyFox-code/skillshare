@@ -72,7 +72,6 @@ function App() {
           isModal={isModal}
           handleChange={handleChange}
           handleSubmit={handleSubmit}
-          onClickHandleSubmit={onClickHandleSubmit}
           value={value}
         />
         <div className="btn_wrapper">
