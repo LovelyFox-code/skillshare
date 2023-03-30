@@ -36,14 +36,11 @@ function App() {
     setValue(target.value);
   };
 
-  // two func do the same, can not change it because of (event)
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setSkills([...skills, { skill: value, id: createID() }]);
   };
-  const onClickHandleSubmit = () => {
-    setSkills([...skills, { skill: value, id: createID() }]);
-  };
+
   const showHideHandler = () => {
     setIsShowed(!isShowed);
   };

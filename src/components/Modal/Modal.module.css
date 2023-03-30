@@ -9,22 +9,27 @@
     border-radius: var(--border-radius);
     padding: var(--padding-large);
 }
-input{
+
+input {
     padding: 8px 16px;
-   
+
 }
+
 input:focus {
     outline: none;
 }
-label{
+
+label {
     color: var(--accent-color);
 }
-.input_box{
+
+.input_box {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.btn_plus{
+
+.btn_plus {
     background-color: white;
     border: none;
 }
