@@ -19,11 +19,12 @@ const User = () => {
     }
     userFetch()
   }, [])
+  const {name, picture} = user;
   return (
     <div className={styles.wrapper}>
       <div className={styles.user}>
-        {user.picture ? <img src={user.picture} alt="user"/> : <div className={styles.user_img}><HiOutlineUserCircle size="100px" color="#0b9dcf" /></div>}
-        {user.name ? <h1>{user.name}</h1> : <form>
+        {picture ? <img src={picture} alt="user"/> : <div className={styles.user_img}><HiOutlineUserCircle size="100px" color="#0b9dcf" /></div>}
+        {name ? <h1>{name}</h1> : <form>
       <label>Enter your name:
         <input type="text" />
       </label>

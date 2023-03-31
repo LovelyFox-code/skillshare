@@ -9,9 +9,6 @@
 - Flex-box
 - [TypeScript](https://www.typescriptlang.org/) - TypeScript
 
-
-
-
 ### To do
 - add standards
 - questions about standards
