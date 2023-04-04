@@ -53,7 +53,6 @@ function App() {
   };
   const modalToggle = () => {
     setIsModal(!isModal);
-    console.log("modal", isModal);
   };
 
   return (
@@ -95,6 +94,7 @@ function App() {
           </div>
         </div>
       )}
+
     </div>
   );
 }
