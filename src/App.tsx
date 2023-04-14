@@ -2,6 +2,7 @@ import { useState, useEffect, ChangeEvent, FormEvent } from "react";
 import "./App.css";
 
 import Button from "./components/Button/Button";
+import { ExportToExcel } from "./components/ExcelExport/ExcelExport";
 import Loader from "./components/Loader/Loader";
 import Modal from "./components/Modal/Modal";
 import SkillSection from "./components/SkillSection/SkillSection";
@@ -62,7 +63,9 @@ function App() {
       ) : (
         <div className="box">
           <User />
-          <h1>Your <span>skills</span></h1>
+          <h1>
+            Your <span>skills</span>
+          </h1>
           <div className="container_flex">
             <p>Current Level</p>
             <p>Interest</p>
@@ -92,9 +95,9 @@ function App() {
               onClick={showHideHandler}
             />
           </div>
+          <ExportToExcel apiData={skills} fileName="" />
         </div>
       )}
-
     </div>
   );
 }
